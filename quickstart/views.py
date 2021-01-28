@@ -13,7 +13,6 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-    print(111111)
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -22,4 +21,3 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    print(2222222)
