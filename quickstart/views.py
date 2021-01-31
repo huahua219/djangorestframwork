@@ -11,9 +11,10 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     允许用户查看或编辑的API路径。
     """
+    # queryset; 不能写错
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-    print(111111)
+
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -22,4 +23,3 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    print(2222222)
