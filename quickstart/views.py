@@ -16,7 +16,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
 
-
 class GroupViewSet(viewsets.ModelViewSet):
     """
     允许组查看或编辑的API路径。
