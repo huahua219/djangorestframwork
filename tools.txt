@@ -1,0 +1,4 @@
+1,我们可以使用curl或httpie测试我们的服务器。Httpie是用Python编写的用户友好的http客户端，我们安装它。
+    pip install httpie
+
+2,
