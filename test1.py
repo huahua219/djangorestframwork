@@ -1,13 +1,22 @@
 
 
-def test(num):
-    in_num = num
-    def nested(label):
-        nonlocal in_num
-        in_num += 1
-        print(label, in_num)
-    return nested
+class Animals():
 
-F = test(0)
-print(F('a'))
-print(F('b'))
+    def __init__(self, *args, **kwargs):
+        self.name = 'huahua'
+        self.age = 29
+
+
+class Dao(Animals):
+
+    def __init__(self, sex, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.sex = sex
+        self.name='huangmingting'
+
+
+if __name__ == '__main__':
+    instance = Dao(sex='femal')
+    print(instance.name)
+    print(instance.age)
+    print(instance.sex)

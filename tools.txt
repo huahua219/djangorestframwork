@@ -2,3 +2,8 @@
     pip install httpie
 
 2,
+
+
+1， 前端框架：http://layuimini.99php.cn/
+    https://www.fastadmin.net/demo.html
+    https://www.fastadmin.net/    (https://doc.fastadmin.net/)

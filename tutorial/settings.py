@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'celery_demo'
+    # 'snippets'
+    # 'tutorial'
 ]
 
 # 打开分页,API只能由管理员使用

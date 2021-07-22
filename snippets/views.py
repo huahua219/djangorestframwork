@@ -1,4 +1,4 @@
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,6 +11,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from celery_demo.tasks import fun_add
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 
@@ -132,4 +133,11 @@ class SnippetList(generics.ListCreateAPIView):
 class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
+
+
+def index(request):
+    print(1111)
+    result = fun_add.delay(4, 222)
+    # return render(request, 'index.html')
+    return JsonResponse({'name': 'huahua', 'age':29})
 

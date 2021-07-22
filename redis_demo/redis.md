@@ -21,3 +21,9 @@
 
 ####强行终止redis
     sudo pkill redis-server
+
+####基本操作命令
+    显示所有key值： keys *
+    设置值： set key value
+    获取值： get key
+
