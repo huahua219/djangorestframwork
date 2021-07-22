@@ -5,5 +5,5 @@ app = Celery('tasks', backend='redis://localhost:6379/0', broker='redis://localh
 
 
 @app.task  # 普通函数装饰为 celery task
-def add(x, y):
+def fun_add(x, y):
     return x + y
