@@ -19,7 +19,7 @@
 
 
 ###启动命令
-    celery -A worker tasks --loglevel=info
+    celery -A tasks worker  --loglevel=info
     tasks为人物脚本tasks.py
 
 ####celery()参数解释

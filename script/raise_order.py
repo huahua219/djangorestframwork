@@ -54,6 +54,7 @@ class Crawler(object):
 
         self.username = '18025475521'
         self.passward = 'ahua1048459134'
+        self.taobao_url = 'https://detail.tmall.com/item.htm?spm=a230r.1.14.126.509f5f05WjTOIW&id=570730408022&ns=1&abbucket=11'
 
     def open_pages(self):
         self.driver.get('https://account.dianping.com/login?redir=http%3A%2F%2Fwww.dianping.com%2F')
@@ -72,10 +73,18 @@ class Crawler(object):
         self.driver.find_element_by_xpath('//*[@id="login-button-account"]').click()
         # cookies = self.driver.get_cookies()
 
+    def open_taobao(self):
+        instance = self.driver.get(url='https://mini.eastday.com/nsa/210515215547907884412.html')
+        return instance.text
+
+
 
 
 if __name__ == '__main__':
     # Crawler()()
     cls = Crawler()
-    cls.open_pages()
+    res = cls.open_taobao()
+    print(res)
+
+
 
