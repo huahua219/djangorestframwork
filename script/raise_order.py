@@ -41,7 +41,8 @@ class Crawler(object):
         self.option.add_experimental_option('excludeSwitches', ['enable-automation'])  # 以键值对的形式加入参数
         # 在调用浏览器驱动时传入option参数就能实现undefined(chrome 79以前版本)
         # self.driver = webdriver.Chrome(executable_path='/Users/hua/Public/pro/chromedriver', options=self.option)
-        self.driver = webdriver.Chrome(executable_path='/Users/hua/Public/pro/chromedriver')
+        # self.driver = webdriver.Chrome(executable_path='/Users/hua/Public/pro/chromedriver')
+        self.driver = webdriver.Firefox(executable_path='/home/hua/geckodriver')  # 火狐浏览器
         # chrome 79以后版本
         self.driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
             "source": """
