@@ -7,3 +7,11 @@
 1， 前端框架：http://layuimini.99php.cn/
     https://www.fastadmin.net/demo.html
     https://www.fastadmin.net/    (https://doc.fastadmin.net/)
+
+
+面试：
+1， python线程、进程安全问题
+2， 单利模式， 设计模式
+3，网络编程
+4，http握手
+5，asyncio异步
