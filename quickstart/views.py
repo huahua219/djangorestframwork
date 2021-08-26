@@ -12,7 +12,7 @@ class UserViewSet(viewsets.ModelViewSet):
     允许用户查看或编辑的API路径。
     """
     # queryset; 不能写错
-    queryset = User.objects.all().order_by('-date_joined')
+    queryset = User.objects.all()
     serializer_class = UserSerializer
 
 
