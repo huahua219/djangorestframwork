@@ -1,0 +1,52 @@
+1， 列表方法：append, extend, count, index, insert, remove, clean, pop, sort(key=None, reverse=False), reverse,
+    列表作为栈使用：用append/pop，“后进先出”
+
+2,重要的方法：filter, lambd, reduce, map, zip
+
+3,定时器 Timer
+
+4,数据压缩和解压：
+    >>> import zlib
+    >>> s = b'witch which has which witches wrist watch'
+    >>> len(s)
+    41
+    >>> t = zlib.compress(s)
+    >>> len(t)
+    37
+    >>> zlib.decompress(t)
+    b'witch which has which witches wrist watch'
+    >>> zlib.crc32(s)
+    226805979
+
+5,pip 有许多子命令：“search”、“install”、“uninstall”、“freeze”等等
+
+6,互联网访问:有许多模块可用于访问互联网和处理互联网协议。其中两个最简单的 urllib.request 用于从URL检索数据，以及 smtplib 用于发送邮件:
+    >>> from urllib.request import urlopen
+    >>> with urlopen('http://tycho.usno.navy.mil/cgi-bin/timer.pl') as response:
+    ...     for line in response:
+    ...         line = line.decode('utf-8')  # Decoding the binary data to text.
+    ...         if 'EST' in line or 'EDT' in line:  # look for Eastern Time
+    ...             print(line)
+
+    <BR>Nov. 25, 09:43:32 PM EST
+
+    >>> import smtplib
+    >>> server = smtplib.SMTP('localhost')
+    >>> server.sendmail('soothsayer@example.org', 'jcaesar@example.org',
+    ... """To: jcaesar@example.org
+    ... From: soothsayer@example.org
+    ...
+    ... Beware the Ides of March.
+    ... """)
+    >>> server.quit()
+
+7，使用 json 保存结构化数据
+    >>> import json
+    >>> json.dumps([1, 'simple', 'list'])
+    '[1, "simple", "list"]
+
+    dumps() 函数的另一个变体叫做 dump() ，它只是将对象序列化为 text file 。因此，如果 f 是一个 text file 对象，我们可以这样做:
+    json.dump(x, f)
+    要再次解码对象，如果 f 是一个打开的以供阅读的 text file 对象:
+
+    x = json.load(f)
