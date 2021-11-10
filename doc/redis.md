@@ -27,3 +27,7 @@
     设置值： set key value
     获取值： get key
 
+    DBSIZE  key 数量
+    flushdb 清空当前数据库中的所有 key
+    flushall 清空所有数据库中的所有 key
+
