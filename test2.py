@@ -63,3 +63,4 @@ maze = [
 
 if __name__ == '__main__':
     find_path(1, 1, 8, 8)
+    pickle.loads(one.cost.encode())[0]

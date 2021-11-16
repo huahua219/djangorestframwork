@@ -3,6 +3,8 @@ https://blog.csdn.net/qq_33196814/article/details/80023790
 https://blog.csdn.net/weixin_44100850/article/details/89512481
 https://www.cnblogs.com/dalaoban/p/9331113.html
 https://www.baidu.com/s?wd=python%20udp%E9%80%9A%E4%BF%A1&rsv_spt=1&rsv_iqid=0xfb0eb7d600000d46&issp=1&f=3&rsv_bp=1&rsv_idx=2&ie=utf-8&rqlang=cn&tn=baiduhome_pg&rsv_enter=1&rsv_dl=ts_1&rsv_btype=t&inputT=19611&rsv_t=e6c6R4mbDWPsPlvdAJhI5IHMyCBb1nW4ctF1xavctFvC%2Bg98vkii2dkJCPZ5x0kdeF69&rsv_sug3=59&rsv_sug1=69&rsv_sug7=100&oq=%25E5%25BE%25AE%25E4%25BF%25A1%25E8%2581%258A%25E5%25A4%25A9%25E5%25BA%2595%25E5%25B1%2582%25E5%258E%259F%25E7%2590%2586&rsv_pq=e91e22a90005ed8c&rsv_sug2=0&prefixsug=python%2520udp&rsp=1&rsv_sug4=20014
+
+小程序开发，插件开发
 """
 
 from socket import socket
