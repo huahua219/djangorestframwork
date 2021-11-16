@@ -43,4 +43,4 @@ threads.append(thread2)
 # 等待所有线程完成
 # for t in threads:
 #     t.join()
-prin("退出主线程")
+print("退出主线程")

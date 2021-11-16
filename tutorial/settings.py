@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+# pip3 install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -90,9 +92,16 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'icbase-v3',
+        'USER': 'root',
+        'PASSWORD': 'asdasd',
+        'HOST': '192.168.0.7',
+        'PORT': '3306',
+        'OPTIONS': {
+            "init_command": "SET default_storage_engine=MYISAM",
+        }
+    },
 }
 
 
