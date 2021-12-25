@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from quickstart import views
+
 # from snippets.views import SnippetsViewSet
 
 router = routers.DefaultRouter()
@@ -32,3 +33,17 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     # url(r'^', include('snippets.urls')),
 ]
+
+# 定时器××××××××start
+from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime
+
+
+def tick():
+    print('Tick! The time is: %s' % datetime.now())
+
+
+scheduler = BackgroundScheduler()
+scheduler.add_job(tick, 'interval', seconds=1)
+scheduler.start()
+# 定时器××××××××end
